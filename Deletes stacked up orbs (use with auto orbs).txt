@@ -1,0 +1,16 @@
+-- Function to delete all orbs in the workspace
+local function deleteAllOrbs()
+    -- Get the Orbs folder in the Workspace
+    local orbsFolder = game:GetService("Workspace"):FindFirstChild("Orbs")
+    -- Check if the Orbs folder exists
+    if orbsFolder then
+        -- Iterate through each orb model in the folder
+        for _, orbModel in ipairs(orbsFolder:GetChildren()) do
+            -- Destroy the orb model
+            orbModel:Destroy()
+        end
+    end
+end
+
+-- Call the function to delete all orbs
+deleteAllOrbs()
