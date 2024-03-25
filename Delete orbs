@@ -16,5 +16,5 @@ while true do
     -- Call the function to delete all orbs
     deleteAllOrbs()
     -- Wait for 5 seconds before repeating
-    wait(5)
+    wait(30)
 end
