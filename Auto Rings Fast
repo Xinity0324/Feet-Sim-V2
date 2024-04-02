@@ -11,19 +11,22 @@ local function collectRing(number)
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
 
-local function collectAllRings()
-    local coroutines = {}
-    for _, number in ipairs(ringNumbers) do
-        table.insert(coroutines, coroutine.create(function()
-            collectRing(number)
-        end))
-    end
-    for _, co in ipairs(coroutines) do
-        coroutine.resume(co)
+-- Function to remove GUI objects from PlayerGui
+local function clearGUI()
+    local player = game.Players.LocalPlayer
+    local playerGui = player.PlayerGui
+    for _, guiObject in ipairs(playerGui:GetChildren()) do
+        guiObject:Destroy()
     end
 end
 
+-- Remove GUI objects before starting the loop
+clearGUI()
+
 while true do
-    collectAllRings()
+    -- Collect rings
+    for _, number in ipairs(ringNumbers) do
+        collectRing(number)
+    end
     wait(0.5) 
 end
