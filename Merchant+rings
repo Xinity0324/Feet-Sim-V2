@@ -1,0 +1,3 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V2/main/Auto-Matthew"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V2/main/Auto-sam"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V2/main/Auto%20Rings%20Fast"))()
