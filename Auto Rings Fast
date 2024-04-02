@@ -28,5 +28,5 @@ while true do
     for _, number in ipairs(ringNumbers) do
         collectRing(number)
     end
-    wait(0.5) 
+    wait(0.1) 
 end
