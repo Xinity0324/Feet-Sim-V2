@@ -1,0 +1,29 @@
+local ringNumbers = {}
+for i = 1, 1000 do
+    table.insert(ringNumbers, i)
+end
+
+local function collectRing(number)
+    local args = {
+        [1] = "Collect Ring",
+        [2] = tostring(number)
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+
+local function collectAllRings()
+    local coroutines = {}
+    for _, number in ipairs(ringNumbers) do
+        table.insert(coroutines, coroutine.create(function()
+            collectRing(number)
+        end))
+    end
+    for _, co in ipairs(coroutines) do
+        coroutine.resume(co)
+    end
+end
+
+while true do
+    collectAllRings()
+    wait(0.5) 
+end
