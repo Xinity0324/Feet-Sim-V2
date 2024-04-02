@@ -1,0 +1,20 @@
+local interval = 180 -- 3 minutes
+
+local function buyItems()
+    for i = 1, 3 do
+        for j = 1, 5 do
+            local args = {
+                [1] = "Purchase Merchant Item",
+                [2] = "Sam", 
+                [3] = i 
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+            wait(0.1) 
+        end
+    end
+end
+
+while true do
+    buyItems()
+    wait(interval)
+end
