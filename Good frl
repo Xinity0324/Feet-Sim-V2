@@ -3,3 +3,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V2/main/Auto%20John"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V2/main/auto%20erik"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xinity0324/Feet-Sim-V2/main/Auto%20Craig"))()
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pryxo/RandomScripts/main/Sprinting%20Simulator"))()
